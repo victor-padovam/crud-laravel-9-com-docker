@@ -1,9 +1,8 @@
 version: "3.7"
 
 services:
-    # image project
-    homedev-app:
-        container_name: homedev-laravel-9
+    projeto-app:
+        container_name: projeto-laravel-9
         build:
             context: .
             dockerfile: Dockerfile
@@ -17,7 +16,7 @@ services:
 
     # nginx
     nginx:
-        container_name: especializati-nginx
+        container_name: servidor-nginx
         image: nginx:alpine
         restart: unless-stopped
         ports:
@@ -30,7 +29,7 @@ services:
 
     # db mysql ${DB_DATABASE} //Busca do arquivo .env
     mysql:
-        container_name: especializati-mysql
+        container_name: banco-mysql
         image: mysql:5.7.22
         restart: unless-stopped
         environment:

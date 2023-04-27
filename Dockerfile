@@ -1,7 +1,7 @@
 FROM php:8.1.1-fpm
 
 # Arguments
-ARG user=homedevroot
+ARG user=projetoroot
 ARG uid=1000
 
 # Install system dependencies
